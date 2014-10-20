@@ -1,0 +1,105 @@
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+body {
+  padding: 0 10px;
+}
+
+.leaks-header-item,
+.leak-item > span {
+  padding-right: 10px;
+}
+
+.page-num-title {
+  font-weight: bold;
+}
+
+.leaks-header-item {
+  display: inline-block;
+}
+.leaks-header-item.sortable > .column-title {
+  color: blue;
+  border-bottom: 1px dotted blue;
+  cursor: pointer;
+}
+.leaks-header-item.sortable.up > .sort-arrow:after {
+  display: inline-block;
+  content: "\21E1";
+}
+.leaks-header-item.sortable.down > .sort-arrow:after {
+  display: inline-block;
+  content: "\21E3";
+}
+
+.leak-item > span {
+  display: inline-block;
+}
+.leak-item > span.negative-credit {
+  color: red;
+}
+.leak-item > span.positive-credit {
+  color: green;
+}
+.leak-item > span.name,
+.leaks-header-item.name {
+  min-width: 170px;
+}
+.leak-item > span.card,
+.leaks-header-item.card {
+  min-width: 170px;
+}
+.leak-item > span.pin,
+.leaks-header-item.pin {
+  min-width: 50px;
+}
+.leak-item > span.phone,
+.leaks-header-item.phone {
+  min-width: 150px;
+}
+.leak-item > span.date_till,
+.leaks-header-item.date_till {
+  min-width: 80px;
+}
+.leak-item > span.credit,
+.leaks-header-item.credit {
+  min-width: 80px;
+}
+.leak-item > span.actual,
+.leaks-header-item.actual {
+  min-width: 50px;
+}
+
+.leaks-page > li {
+  margin: 3px 0;
+}
+
+#settings {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+}
+
+.order-column-item,
+.sortable-placeholder {
+  display: inline-block;
+  width: 150px;
+}
+
+.order-column-item {
+  background: gray;
+  margin-right: 5px;
+  padding: 3px 5px;
+}
+
+.sortable-placeholder {
+  position: relative;
+  top: 5px;
+  height: 20px;
+  border: 1px dashed gray;
+}
+
+button {
+  font-size: 16px;
+}

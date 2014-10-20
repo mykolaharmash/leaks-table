@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Credit Cards Leak</title>
+  <link rel="stylesheet" href="app/styles/main.css">
+</head>
+<body>
+  <div id="settings">
+    <h4>Columns order</h4>
+    <ul class="columns-order"></ul>
+    <button id="save-settings">Save order</button>
+  </div>
+
+  <div id="leaks-list-header"></div>
+  <ul id="leaks-list"></ul>
+  <button id="load-more">More</button>
+
+  <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="vendor/jquery.sortable.min.js"></script>
+  <script src="bower_components/lodash/dist/lodash.min.js"></script>
+  <script src="app/build/app.js"></script>
+
+
+  <script type="text/template" id="settings-column-sort-item">
+    <li class="order-column-item <%= locked ? 'locked' : '' %>">
+      <%= columnName %>
+    </li>
+  </script>
+
+  <script type="text/template" id="leaks-view">
+    <li>
+      <p class="page-num-title">Page #<%= pageNum %></p>
+      <ul class="leaks-page">
+        <%= leakItems %>
+      </ul>
+    </li>
+  </script>
+
+  <script type="text/template" id="leak-item-view">
+    <li class="leak-item"><%= leak %></li>
+  </script>
+
+  <script type="text/template" id="leaks-header-item-view">
+    <div class="leaks-header-item <%= columnKey %>
+      <%= sortable ? 'sortable' : '' %>
+      <%= sortState ? sortState : '' %>"
+    >
+      <span class="column-title"><%= columnName %></span>
+      <span class="sort-arrow"></span>
+    </div>
+  </script>
+</body>
+</html>
